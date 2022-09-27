@@ -1,6 +1,4 @@
-<h1>Login Page</h1>
-
-<a href="https://yordankrushkov.github.io/loginform/"><h2>Login Page</h2></a>
+<h1>Login Form with SASS</h1>
 
 <h2>Technologies</h2>
 React JS, HTML5, SASS 
@@ -11,3 +9,4 @@ React-Icons
 2. Run `npm install` inside the folder.<br/> 
 3. Run `npm start`.<br/> 
 <br/> 
+<a href="https://yordankrushkov.github.io/login-form-style-components/"><h2>Login Form with Styled Components</h2></a>
