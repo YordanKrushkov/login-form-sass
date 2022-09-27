@@ -1,0 +1,32 @@
+@import './variables.scss';
+
+
+@mixin input {
+  // height: 45px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 16px 23px 16px 47px;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid #C3C3C3;
+  border-radius: 5px;
+  color: $base-color;
+  box-sizing: border-box;
+  outline: none;
+
+  &::placeholder {
+    color: $text-color;
+  }
+
+  &:focus,
+  &:hover {
+    border: 1px solid $base-color;
+    cursor: pointer;
+
+    &::placeholder {
+      color: $base-color;
+    }
+  }
+
+}

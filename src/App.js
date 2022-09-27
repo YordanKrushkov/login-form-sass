@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react';
+import ForgotPassword from './Pages/ForgotPassword';
+import LoginPage from './Pages/LoginPage';
 
 function App() {
+  const [isForgotPassword, setIsForgotPassword] = useState()
+
+  const toggle = () => setIsForgotPassword(!isForgotPassword)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {isForgotPassword 
+        ? <ForgotPassword toggle={toggle}/>
+        :<LoginPage toggle={toggle}/>
+      }
+    </>
   );
 }
 

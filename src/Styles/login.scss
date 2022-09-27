@@ -1,0 +1,174 @@
+@import './variables.scss';
+@import './mixins.scss';
+@import './mediaQueries.scss';
+
+.login-wrapper {
+  height: 100vh;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+
+  form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px 0;
+
+    @include MinQ(600px) {
+      width: 60%;
+      padding: 20px 0;
+    }
+
+    @include MinQ(900px) {
+      width: 35%;
+    }
+
+    @include MinQ(1250px) {
+      width: 25%;
+    }
+
+    @include MinQ(1700px) {
+      width: 20%;
+    }
+  }
+
+  h1,
+  .connect-social-media {
+    text-align: center;
+  }
+
+  h1 {
+    text-transform: capitalize;
+    font-size: 36px;
+    margin: 10px 0;
+
+    @include MinQ(1600px) {
+      margin: 36px 0;
+    }
+  }
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  box-sizing: initial;
+
+  .input {
+    @include input;
+  }
+
+  svg {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    font-size: 25px;
+    color: $text-color;
+  }
+
+  &:hover,
+  &:focus {
+    color: $base-color;
+
+    svg {
+      color: $base-color;
+    }
+  }
+
+
+}
+
+.forgotten-password {
+  align-self: flex-end;
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: $base-color;
+
+  &:hover {
+    cursor: pointer;
+    color: $secondary-color;
+
+  }
+}
+
+.connect-social-media {
+  color: #B0B0B0;
+  margin: 20px 0;
+
+  @include MinQ(650px) {
+    margin: 40px 0 36px;
+  }
+}
+
+.btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+
+  @include MinQ(900px) {
+    flex-direction: row;
+    gap: 20px;
+
+  }
+}
+
+.btn {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+  color: white;
+  background-color: $base-color;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+
+  @include MinQ(900px) {
+    font-size: 16px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.primary {
+  padding: 15px 0;
+  margin-top: 20px;
+  background-color: $base-color;
+  text-transform: uppercase;
+
+  @include MinQ(900px) {
+    margin-top: 40px;
+    font-size: 16px;
+  }
+}
+
+.google {
+  background-color: $secondary-color;
+}
+
+.secondary {
+  // height: 40px;
+  padding: 12px 57px;
+
+}
+
+.under-text {
+  position: absolute;
+  bottom: 20px;
+  transform: translate(50% 50%);
+  color: $text-color;
+
+  span {
+    color: $base-color;
+
+    &:hover {
+      cursor: pointer;
+      color: $secondary-color;
+    }
+  }
+}
